@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinnamoroll Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8e1f4; /* Soft pink background */
+            font-family: 'Quicksand', sans-serif; /* Indie vibe font */
+            color: #6a1b9a; /* Dark purple text */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #d5006d; /* Pink color */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+        .start-button {
+            background-color: #d5006d; /* Pink button */
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .start-button:hover {
+            background-color: #c51162; /* Darker pink on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .game-area {
+            display: none; /* Hidden until game starts */
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #ffffff; /* White background for game area */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .message {
+            display: none; /* Hidden until game ends */
+            background-color: #e1bee7; /* Light purple box */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .cinnamoroll {
+            width: 100px; /* Adjust size as needed */
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Cinnamoroll Adventure!</h1>
+    <button class="start-button" onclick="startGame()">Press Here to Start, Pretty</button>
+
+    <div class="game-area" id="gameArea">
+        <img src="https://example.com/cinnamoroll.gif" alt="Cinnamoroll" class="cinnamoroll"> <!-- Replace with your Cinnamoroll GIF -->
+        <p>Game in progress...</p>
+        <!-- Add game elements here -->
+    </div>
+
+    <div class="message" id="message">
+        <p>Congratulations, my love! You did it!</p>
+        <p>Thank you for being amazing!</p>
+    </div>
+
+    <script>
+        function startGame() {
+            document.querySelector('.start-button').style.display = 'none';
+            document.getElementById('gameArea').style.display = 'block';
+            // Initialize game logic here
+        }
+
+        function endGame() {
+            document.getElementById('gameArea').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
